@@ -111,7 +111,7 @@ class InternModel:
 
         tokenizer = AutoTokenizer.from_pretrained(self.path, trust_remote_code=True)
 
-        # Initialize the streamer
+        # Initialise the streamer
         streamer = TextIteratorStreamer(tokenizer, skip_prompt=True, skip_special_tokens=True, timeout=10)
         # Define the generation configuration
         generation_config = dict(num_beams=1, max_new_tokens=1024, do_sample=False, streamer=streamer)
@@ -130,7 +130,6 @@ class InternModel:
         ))
         thread.start()
 
-        # ADDED!!!
         # Initialize an empty string to store the generated text
         generated_text = ''
         # Loop through the streamer to get the new text as it is generated
