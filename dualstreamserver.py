@@ -1,12 +1,12 @@
 '''
-File: dualstream_server3.py
+File: dualstreamserver.py
 Created Date: Monday, September 2nd 2024, 8:58:57 pm
 Author: alex-crouch
 
 Project Ver 2024
 '''
 
-from tts_instream_helper2 import *
+from tts_instream_helper import *
 from intern_stream_helper import *
 import asyncio
 from contextlib import asynccontextmanager
